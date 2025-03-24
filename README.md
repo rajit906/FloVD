@@ -42,7 +42,7 @@ bash build_grounded_sam2.sh
 ```
 
 
-* Checkpoints
+* Checkpoints <br>
 Download the checkpoints below<br>
 [\[FVSM_EDM\]](https://drive.google.com/file/d/1Iw8dEGa7sd_7EHdAYMZRnlr3rxM1nmV_/view?usp=drive_link)
 [\[FVSM_Quadratic\]](https://drive.google.com/file/d/1oYv3l5KIvgh6gc109BivlBaBHArWq2Sd/view?usp=drive_link)
@@ -56,7 +56,7 @@ For these models, please refer links below.
 
 
 ## Inference
-* Preparation
+* Preparation <br>
 Before sampling, set path (configuration, checkpoint) in the bash script
 Before sampling, set video data for inference. You need only one frame per scene for the input image.
 ```shell
@@ -68,14 +68,14 @@ Before sampling, set video data for inference. You need only one frame per scene
 │   ├   ├── ... (not_necessary)
 ```
 
-* Sample video frames
+* Sample video frames <br>
 FloVD synthesizes 14-frame videos.
 ```shell
 bash scripts/inference_FloVD.sh
 ```
 <br>
 
-* Tip
+* Tips <br>
 Provided inference code will save depth-warped images using the input camera parameters. 
 You can forecast the camera control results with the warped images.
 If the translation vector in the camera parameter is too large, you can adjust the 'speed' term in the inference code.
@@ -96,7 +96,7 @@ If the translation vector in the camera parameter is too large, you can adjust t
 │   ├── ...
 ```
 
-* Preparation
+* Preparation <br>
 Before training, set path (SVD backbone, Dataset, Depth_anything_v2, Grounded_SAM2) in the configuration files.
 
 * FVSM
