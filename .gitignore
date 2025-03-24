@@ -1,0 +1,12 @@
+wandb/
+debugs/
+outputs/
+samples/
+results/
+__pycache__/
+.DS_Store/
+
+*.ipynb
+*.safetensors 
+*.ckpt
+*.csv

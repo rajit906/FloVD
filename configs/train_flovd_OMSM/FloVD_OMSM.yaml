@@ -1,0 +1,91 @@
+output_dir: "./output/OMSM/"
+pretrained_model_path: "path_to_svd"
+unet_subfolder: "unet"
+
+train_data:
+  target: flovd.data.video_dataset.VideoDataset
+  kwargs:
+    root_path:       "path_to_video_dataset"
+    metadata_path:   "path_to_metadata"
+    sample_stride: 4
+    sample_n_frames: 14
+    relative_pose: true
+    zero_t_first_frame: true
+    sample_size: [320, 576]
+    rescale_fxy: true
+    use_flip: false
+    camera_root_path: "./assets/manual_poses" 
+
+validation_data:
+  target: flovd.data.video_dataset.VideoDataset
+  kwargs:
+    root_path:       "path_to_video_dataset"
+    metadata_path:   "path_to_metadata"
+    sample_stride: 4
+    sample_n_frames: 14
+    relative_pose: true
+    zero_t_first_frame: true
+    sample_size: [320, 576]
+    rescale_fxy: true
+    use_flip: false
+    use_sampled_validation: true
+    frame_num_sampled_validation: 8
+    camera_root_path: "./assets/manual_poses" 
+
+random_null_image_ratio: 0.15
+
+
+flow_generator_kwargs:
+  do_normalize_flow: true
+  scale_factor: [12, 8]
+  optical_flow_estimator_kwargs:
+    raft_iter: 20
+    use_observed_mask: false
+  camera_flow_generator_kwargs:
+    use_observed_mask: false
+    depth_estimator_kwargs:
+      target: flovd.modules.depth_warping.depth_warping.DepthWarping_wrapper
+      kwargs:
+        ckpt_path: checkpoints/depth_anything/depth_anything_v2_metric_hypersim_vitb.pth # path to depth_anything_v2 checkpoint
+        model_config:
+          max_depth: 20
+          encoder: 'vitb'
+          features: 128 
+          out_channels: [96, 192, 384, 768]
+
+
+
+do_sanity_check: true
+sample_before_training: false
+
+max_train_epoch:      -1
+max_train_steps:      100000
+validation_steps:       10000
+validation_steps_tuple: [10, ]
+
+learning_rate:    3.e-5
+
+P_mean: 0.7
+P_std: 1.6
+condition_image_noise_mean: -3.0
+condition_image_noise_std: 0.5
+sample_latent: true
+first_image_cond: true
+
+num_inference_steps: 25
+min_guidance_scale: 1.0
+max_guidance_scale: 3.0
+
+num_workers: 8
+train_batch_size: 1 
+checkpointing_epochs: -1
+checkpointing_steps:  10000
+
+mixed_precision_training: true # false
+enable_xformers_memory_efficient_attention: true
+
+global_seed: 42
+logger_interval: 10
+
+decode_chunk_size: 7
+gradient_accumulation_steps: 4

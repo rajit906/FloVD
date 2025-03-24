@@ -1,0 +1,23 @@
+[03/24 10:48:29] FloVD:263 INFO: Building Optimizer and Scheduler
+[03/24 10:48:29] FloVD:268 INFO: trainable parameter number: 1428
+[03/24 10:48:29] FloVD:269 INFO: trainable parameter scale: 1524.623 M
+[03/24 10:48:32] FloVD:286 INFO: Building training datasets
+[03/24 10:48:33] FloVD:309 INFO: Building validation datasets
+[03/24 10:48:34] FloVD:349 INFO: Building DDP
+[03/24 10:48:35] FloVD:367 INFO: ***** Running training *****
+[03/24 10:48:35] FloVD:368 INFO:   Num examples = 485186
+[03/24 10:48:35] FloVD:369 INFO:   Num Epochs = 1
+[03/24 10:48:35] FloVD:370 INFO:   Instantaneous batch size per device = 1
+[03/24 10:48:35] FloVD:371 INFO:   Total train batch size (w. parallel, distributed & accumulation) = 1
+[03/24 10:48:35] FloVD:372 INFO:   Gradient Accumulation steps = 1
+[03/24 10:48:35] FloVD:373 INFO:   Total optimization steps (max_train_step X gradient_accumulation_steps) = 100000
+[03/24 10:49:30] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:49:48] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:50:13] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:50:36] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:50:56] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:51:16] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:51:39] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:51:57] FloVD:698 INFO: Saved samples to ./output/OMSM/FloVD_OMSM_Shutterstock_GA-2025-03-24T10-48-22/samples/sample-9_training
+[03/24 10:51:59] FloVD:626 INFO: Iter: 10/100000, Loss:  0.0395, lr: [3e-05], Data time: 0.00 seconds, Iter time: 1.88 seconds, ETA: 2 days 4 hours 13 minutes 6.77 seconds, GPU memory:  55.08 G
+[03/24 10:52:18] FloVD:626 INFO: Iter: 20/100000, Loss:  0.1582, lr: [3e-05], Data time: 0.00 seconds, Iter time: 1.87 seconds, ETA: 2 days 3 hours 56 minutes 7.14 seconds, GPU memory:  55.08 G

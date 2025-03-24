@@ -1,0 +1,4 @@
+[03/24 10:48:00] FloVD:263 INFO: Building Optimizer and Scheduler
+[03/24 10:48:00] FloVD:268 INFO: trainable parameter number: 1428
+[03/24 10:48:00] FloVD:269 INFO: trainable parameter scale: 1524.623 M
+[03/24 10:48:02] FloVD:286 INFO: Building training datasets

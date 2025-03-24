@@ -1,0 +1,149 @@
+name: FloVD_FVSM_Shutterstock
+launcher: pytorch
+port: 63506
+output_dir: ./output/FloVD_FVSM_Shutterstock-2025-03-24T08-33-07
+pretrained_model_path: /local_home/workspace/checkpoints/svd/
+unet_subfolder: unet
+down_block_types:
+- CrossAttnDownBlockSpatioTemporalPoseCond
+- CrossAttnDownBlockSpatioTemporalPoseCond
+- CrossAttnDownBlockSpatioTemporalPoseCond
+- DownBlockSpatioTemporal
+up_block_types:
+- UpBlockSpatioTemporal
+- CrossAttnUpBlockSpatioTemporal
+- CrossAttnUpBlockSpatioTemporal
+- CrossAttnUpBlockSpatioTemporal
+train_data:
+  target: flovd.data.video_dataset.VideoDataset
+  kwargs:
+    root_path: /video_data/shutterstock/
+    metadata_path: /local_home/workspace/local_data/shutterstock_metadata_wonjoon/shutterstock_0.75_1.0_filter_metadata.json
+    sample_stride: 4
+    sample_n_frames: 14
+    relative_pose: true
+    zero_t_first_frame: true
+    sample_size:
+    - 320
+    - 576
+    rescale_fxy: true
+    use_flip: false
+    camera_root_path: ./assets/manual_poses
+validation_data:
+  target: flovd.data.video_dataset.VideoDataset
+  kwargs:
+    root_path: /video_data/shutterstock/
+    metadata_path: /local_home/workspace/local_data/shutterstock_metadata_wonjoon/shutterstock_0.75_1.0_filter_metadata.json
+    sample_stride: 4
+    sample_n_frames: 14
+    relative_pose: true
+    zero_t_first_frame: true
+    sample_size:
+    - 320
+    - 576
+    rescale_fxy: true
+    use_flip: false
+    use_sampled_validation: true
+    frame_num_sampled_validation: 8
+    camera_root_path: ./assets/manual_poses
+random_null_image_ratio: 0.15
+flow_encoder_kwargs:
+  downscale_factor: 8
+  channels:
+  - 320
+  - 640
+  - 1280
+  - 1280
+  nums_rb: 2
+  cin: 128
+  ksize: 1
+  sk: true
+  use_conv: false
+  compression_factor: 1
+  temporal_attention_nhead: 8
+  attention_block_types:
+  - Temporal_Self
+  temporal_position_encoding: true
+  temporal_position_encoding_max_len: 14
+attention_processor_kwargs:
+  add_spatial: false
+  add_temporal: true
+  attn_processor_name: attn1
+  pose_feature_dimensions:
+  - 320
+  - 640
+  - 1280
+  - 1280
+  query_condition: true
+  key_value_condition: true
+  scale: 1.0
+flow_generator_kwargs:
+  do_normalize_flow: true
+  scale_factor:
+  - 45
+  - 24
+  optical_flow_estimator_kwargs:
+    raft_iter: 20
+    use_observed_mask: false
+  camera_flow_generator_kwargs:
+    use_observed_mask: false
+    depth_estimator_kwargs:
+      target: flovd.modules.depth_warping.depth_warping.DepthWarping_wrapper
+      kwargs:
+        ckpt_path: /local_home/workspace/checkpoints/depth_anything/depth_anything_v2_metric_hypersim_vitb.pth
+        model_config:
+          max_depth: 20
+          encoder: vitb
+          features: 128
+          out_channels:
+          - 96
+          - 192
+          - 384
+          - 768
+do_sanity_check: true
+sample_before_training: false
+video_length: 14
+max_train_epoch: -1
+max_train_steps: 50000
+validation_steps: 10000
+validation_steps_tuple:
+- 500
+learning_rate: 3.0e-05
+lr_warmup_steps: 0
+lr_scheduler: constant
+P_mean: 0.7
+P_std: 1.6
+condition_image_noise_mean: -3.0
+condition_image_noise_std: 0.5
+sample_latent: true
+first_image_cond: true
+num_inference_steps: 25
+min_guidance_scale: 1.0
+max_guidance_scale: 3.0
+num_workers: 8
+train_batch_size: 2
+adam_beta1: 0.9
+adam_beta2: 0.999
+adam_weight_decay: 0.01
+adam_epsilon: 1.0e-08
+max_grad_norm: 1.0
+checkpointing_epochs: -1
+checkpointing_steps: 10000
+mixed_precision_training: true
+enable_xformers_memory_efficient_attention: true
+global_seed: 42
+logger_interval: 10
+resume_from: null
+use_cubic_sampling: false
+use_quadratic_sampling: false
+decode_chunk_size: 7
+unet_training_strategy: null
+local_rank: 0
+global_rank: 0
+num_processes: 2
+is_main_process: true
+seed: 42
+folder_name: FloVD_FVSM_Shutterstock-2025-03-24T08-33-07
+fps: 7
+gradient_accumulation_steps: 1
+motion_bucket_id: 127
