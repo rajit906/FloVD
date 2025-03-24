@@ -36,19 +36,19 @@ pip install torch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 --index-url https
 pip install -r requirements.txt
 ```
 
-* Build Grounded_SAM2 (Segmentation module)
+* Build Grounded_SAM2 (Segmentation model)
 ```shell
 bash build_grounded_sam2.sh
 ```
 
 
 * Checkpoints <br>
-Download the checkpoints below<br>
+Download the FloVD checkpoints below<br>
 [\[FVSM_EDM\]](https://drive.google.com/file/d/1Iw8dEGa7sd_7EHdAYMZRnlr3rxM1nmV_/view?usp=drive_link)
 [\[FVSM_Quadratic\]](https://drive.google.com/file/d/1oYv3l5KIvgh6gc109BivlBaBHArWq2Sd/view?usp=drive_link)
 [\[OMSM\]](https://drive.google.com/file/d/1FAKXRBK95TCf6WA6UXTKhGphoOkuf6km/view?usp=drive_link) <br>
-In addition, we used pre-trained video diffusion model (SVD), off-the-shelf depth estimation model (Depth Anything V2, metric depth) and segmentation model (Grounded SAM 2, open-vocabulary segmentation method).
-For these models, please refer links below.
+In addition, we used the pre-trained video diffusion model (SVD), the off-the-shelf depth estimation model (Depth Anything V2, metric depth) and the segmentation model (Grounded SAM 2, open-vocabulary segmentation method).
+For these models, please refer links below. <br>
 [\[SVD\]](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/tree/main)
 [\[Depth_anything_v2_metric\]](https://github.com/DepthAnything/Depth-Anything-V2/tree/main/metric_depth)
 [\[Grounded_SAM2\]](https://github.com/IDEA-Research/Grounded-SAM-2)
