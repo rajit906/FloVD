@@ -75,10 +75,9 @@ bash scripts/inference_FloVD.sh
 ```
 <br>
 
-* Tips <br>
-Provided inference code will save depth-warped images using the input camera parameters. 
-You can forecast the camera control results with the warped images.
-If the translation vector in the camera parameter is too large, you can adjust the 'speed' term in the inference code.
+## Tips
+* Provided inference code will save depth-warped images using the input camera parameters. You can forecast the camera control results with the warped images. If the translation vector in the camera parameter is too large, you can adjust the 'speed' term in the inference code.
+* For better camera controllability, you might use the FVSM-Quadratic model. For better video synthesis quality, we recommend you to use the FVSM-EDM model.
 <br>
 
 
