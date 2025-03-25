@@ -109,6 +109,17 @@ bash scripts/train_OMSM.sh
 bash scripts/train_OMSM_Curated.sh
 ```
 
+
+## Evaluation
+* For the evaluation of the object motion synthesis quality, use the benchmark datasets below. 
+* We provide two benchmark datasets, one for SVD and another for CogVideoX. <br>
+Motion_eval_benchmark_SVD and Motion_eval_benchmark_CogVideox include video clips with 14 frames and 49 frames, respectively. For Motion_eval_benchmark_CogVideox, we use video clips with 16 fps. <br>
+[\[Motion_eval_benchmark_SVD\]](https://drive.google.com/file/d/1kdcJFqdCsg5OlBK4VCjqvXA-ezb0gANw/view?usp=drive_link)
+[\[Motion_eval_benchmark_CogVideoX\]](https://drive.google.com/file/d/1EKNtH72reT3MxRHHB83PVaxaDYeX6VL1/view?usp=drive_link)
+* For detailed description about the evaluation protocol, please refer to the Sec. 5.2 of the main paper.
+* If you use the benchmark datasets of the object motion synthesis quality, please cite our paper. <br>
+
+
 ## Others
 * We heavily borrow codes from [\[CameraCtrl\]](https://github.com/hehao13/CameraCtrl). Thanks for their contributions.
 
