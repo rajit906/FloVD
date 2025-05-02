@@ -36,14 +36,14 @@ POSTECH, Microsoft Research Asia
 
 - **News**: ```2025/05/02```: We have updated the code for `FloVD-CogVideoX`. We will release dataset preprocessing and training codes soon.
 
+- **News**: ```2025/02/26```: Our paper has been accepted to CVPR 2025.
 
-## Table of Contents
 
 ## Quick Start
 
 ### Prompt Optimization
 
-As mentioned in [CogVideoX](https://github.com/THUDM/CogVideo), we recommend to use long, detailed text prompts to obtain better results. Our FloVD-CogVideoX model is trained using text captions extracted from [CogVLM2](https://github.com/THUDM/CogVLM2).
+As mentioned in [CogVideoX](https://github.com/THUDM/CogVideo), we recommend to use long, detailed text prompts to get better results. Our FloVD-CogVideoX model is trained using text captions extracted from [CogVLM2](https://github.com/THUDM/CogVLM2).
 
 ### Environment
 
@@ -123,7 +123,7 @@ This folder contains some tools for camera trajectory generation, visualization,
 ```
 
 ## Reference
-We thank [CogVideoX](https://github.com/THUDM/CogVideo) open sources
+We thank [CogVideoX](https://github.com/THUDM/CogVideo) for open source
 
 ## Model-License
 
