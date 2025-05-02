@@ -1,6 +1,4 @@
-
-https://github.com/user-attachments/assets/5cfee98d-f67c-42b5-a7b4-e93355b4e674
-# FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis<br>
+# FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis (CogVideoX-based FloVD)<br>
 
 ![Teaser image 1](./assets/pages/teaser.png)
 
