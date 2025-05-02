@@ -1,3 +1,5 @@
+
+https://github.com/user-attachments/assets/5cfee98d-f67c-42b5-a7b4-e93355b4e674
 # FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis<br>
 
 ![Teaser image 1](./assets/pages/teaser.png)
@@ -15,17 +17,19 @@ POSTECH, Microsoft Research Asia
 ### FloVD-CogVideoX-5B
 
 
-
 <table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
   <tr>
       <td>
-          <video src="https://github.com/user-attachments/assets/10f2d8ea-7687-4f09-83c0-a82635ab05ba" width="100%" controls autoplay loop></video>
+          <video src="https://github.com/user-attachments/assets/a55d1c29-6682-417d-886c-695b1d1b61fd" width="100%" controls autoplay loop></video>
       </td>
       <td>
-          <video src="https://github.com/JinWonjoon/FloVD/blob/cogvideox/assets/pages/res2.mp4" width="100%" controls autoplay loop></video>
+          <video src="https://github.com/user-attachments/assets/4def8617-063f-4e61-969a-fd0507dbdeec" width="100%" controls autoplay loop></video>
       </td>
        <td>
-          <video src="https://github.com/JinWonjoon/FloVD/blob/cogvideox/assets/pages/res3.mp4" width="100%" controls autoplay loop></video>
+          <video src="https://github.com/user-attachments/assets/55745611-fea3-4f3f-bdd1-48b5f6c24f98" width="100%" controls autoplay loop></video>
+     </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/97be3121-ae38-45f9-822a-e387cf262824" width="100%" controls autoplay loop></video>
      </td>
   </tr>
 </table>
