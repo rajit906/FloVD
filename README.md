@@ -1,6 +1,6 @@
 # FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis<br>
 
-![Teaser image 1](./docs/teaser.png)
+![Teaser image 1](./assets/pages/teaser.png)
 
 [\[Project Page\]](https://jinwonjoon.github.io/flovd_site/)
 [\[arXiv\]](https://arxiv.org/abs/2502.08244/)
@@ -17,13 +17,13 @@ POSTECH, Microsoft Research Asia
 <table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
   <tr>
       <td>
-          <video src="assets/pages/res1.mp4" width="100%" controls autoplay loop></video>
+          <video src="./assets/pages/res1.mp4" width="100%" controls autoplay loop></video>
       </td>
       <td>
-          <video src="assets/pages/res2.mp4" width="100%" controls autoplay loop></video>
+          <video src="./assets/pages/res2.mp4" width="100%" controls autoplay loop></video>
       </td>
        <td>
-          <video src="assets/pages/res3.mp4" width="100%" controls autoplay loop></video>
+          <video src="./assets/pages/res3.mp4" width="100%" controls autoplay loop></video>
      </td>
   </tr>
 </table>
