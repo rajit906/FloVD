@@ -1,5 +1,4 @@
-# FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis<br>
-<sub> SVD-based FloVD codes </sub>
+# FloVD: Optical Flow Meets Video Diffusion Model for Enhanced Camera-Controlled Video Synthesis (SVD-based FloVD)<br>
 <br>
 
 ![Teaser image 1](./docs/teaser.png)
@@ -12,19 +11,43 @@ Wonjoon Jin, Qi Dai, Chong Luo, Seung-Hwan Baek, Sunghyun Cho<br>
 POSTECH, Microsoft Research Asia
 <br>
 
+## News
+* Our paper has been accepted to CVPR 2025!
+* We release CogVideoX-based FloVD. Check this out! [FloVD-CogVideoX](https://github.com/JinWonjoon/FloVD/tree/cogvideox)
+<br>
+
+
+## Gallery
+
+### FloVD-CogVideoX-5B
+<table border="0" style="width: 100%; text-align: left; margin-top: 20px;">
+  <tr>
+      <td>
+          <video src="https://github.com/user-attachments/assets/a55d1c29-6682-417d-886c-695b1d1b61fd" width="100%" controls autoplay loop></video>
+      </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/4def8617-063f-4e61-969a-fd0507dbdeec" width="100%" controls autoplay loop></video>
+      </td>
+       <td>
+          <video src="https://github.com/user-attachments/assets/55745611-fea3-4f3f-bdd1-48b5f6c24f98" width="100%" controls autoplay loop></video>
+     </td>
+      <td>
+          <video src="https://github.com/user-attachments/assets/97be3121-ae38-45f9-822a-e387cf262824" width="100%" controls autoplay loop></video>
+     </td>
+  </tr>
+</table>
+
+
 ## Abstract
 *We present FloVD, a novel video diffusion model for camera-controllable video generation. FloVD leverages optical flow to represent the motions of the camera and moving objects. This approach offers two key benefits. Since optical flow can be directly estimated from videos, our approach allows for the use of arbitrary training videos without ground-truth camera parameters. Moreover, as background optical flow encodes 3D correlation across different viewpoints, our method enables detailed camera control by leveraging the background motion. To synthesize natural object motion while supporting detailed camera control, our framework adopts a two-stage video synthesis pipeline consisting of optical flow generation and flow-conditioned video synthesis. Extensive experiments demonstrate the superiority of our method over previous approaches in terms of accurate camera control and natural object motion synthesis.*
 <br>
 
-## News
-* Our paper has been accepted to CVPR 2025!
-<br>
 
 ## TODO
 - [x] Release SVD-based FloVD codes
-- [ ] Release evaluation benchmark dataset for object motion synthesis quality (SVD backbone)
-- [ ] Release CogVideoX-based FloVD codes
-- [ ] Release evaluation benchmark dataset for object motion synthesis quality (CogVideoX backbone)
+- [x] Release evaluation benchmark dataset for object motion synthesis quality (SVD backbone)
+- [x] Release CogVideoX-based FloVD codes
+- [x] Release evaluation benchmark dataset for object motion synthesis quality (CogVideoX backbone)
 <br>
 
 ## Preparation
