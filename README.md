@@ -91,6 +91,17 @@ Refer to "./assets/cam_trajectory/" for visualization of each camera trajectory.
 │   ├ ...
 ```
 
+### Inference Settings
+In the inference time, we recommend to use the same setting used in the training time.
++ The number of frames: 49
+
++ FPS: 16
+
++ Flow scale factor: (s_x, s_y) = (60, 36)
+
++ CONTROLNET_GUIDANCE_END: 0.4 for better camera controllability, 0.1 for more natural object motions. This argument means the ratio of timestep to inject ControlNet features to the pre-trained model.
+
+
 ### Inference
 
 + [flovd_demo](inference/flovd_demo.py): To synthesize videos with desired camera trajectory and natural object motions, use this. A more detailed inference code explanation, including the significance of common parameters. Refer to [flovd_demo_script](inference/inference_scripts/flovd_demo.sh)
