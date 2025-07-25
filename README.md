@@ -146,6 +146,16 @@ Motion_eval_benchmark_SVD and Motion_eval_benchmark_CogVideox include video clip
 ## Others
 * We heavily borrow codes from [\[CameraCtrl\]](https://github.com/hehao13/CameraCtrl). Thanks for their contributions.
 
+pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+pip3 install python-dateutil
+export TORCH_CUDA_ARCH_LIST="9.0"
+pip install ninja -> pip install -v -U git+https://github.com/facebookresearch/xformers.git@main#egg=xformers
+sudo cp nvidia_video_sdk/Lib/linux/stubs/aarch64/libnvcuvid.so /usr/bin/nvcc OR /usr/lib/aarch64-linux-gnu/ 
+rm -rf *
+cmake .. -DUSE_CUDA=0 -DCMAKE_BUILD_TYPE=Release
+make
+cd python -> pip install -e . --no-deps
+
 
 ```bibtex
 @article{jin2025flovd,
